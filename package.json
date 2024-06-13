@@ -17,7 +17,6 @@
     "cli-table3": "0.6.0"
   },
   "dependencies": {
-    "@storybook/addon-webpack5-compiler-babel": "^3.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -25,6 +24,7 @@
     "@storybook/addon-actions": "^8.1.7",
     "@storybook/addon-essentials": "^8.1.7",
     "@storybook/addon-links": "^8.1.7",
+    "@storybook/react": "^8.1.8",
     "@storybook/react-vite": "^8.1.7",
     "@types/react": "^18.2.64",
     "@types/react-dom": "^18.2.21",
@@ -45,5 +45,6 @@
     "vite-storybook": "^0.0.9",
     "vitest": "^1.6.0"
   },
-  "main": "dist-electron/main.js"
+  "main": "dist-electron/main.js",
+  "packageManager": "yarn@4.3.0"
 }
