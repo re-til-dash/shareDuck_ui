@@ -8,13 +8,24 @@
     "build": "tsc && vite build && electron-builder",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "token-transformer": " node  ./src/config/tokenTransformer.js"
+    "token-transformer": " node  ./src/config/tokenTransformer.js",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "resolutions": {
+    "string-width": "4.2.3",
+    "cli-table3": "0.6.0"
   },
   "dependencies": {
+    "@storybook/addon-webpack5-compiler-babel": "^3.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^8.1.7",
+    "@storybook/addon-essentials": "^8.1.7",
+    "@storybook/addon-links": "^8.1.7",
+    "@storybook/react-vite": "^8.1.7",
     "@types/react": "^18.2.64",
     "@types/react-dom": "^18.2.21",
     "@typescript-eslint/eslint-plugin": "^7.1.1",
@@ -25,11 +36,14 @@
     "eslint": "^8.57.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
+    "storybook": "^8.1.7",
     "token-transformer": "^0.0.33",
     "typescript": "^5.2.2",
     "vite": "^5.1.6",
     "vite-plugin-electron": "^0.28.6",
-    "vite-plugin-electron-renderer": "^0.14.5"
+    "vite-plugin-electron-renderer": "^0.14.5",
+    "vite-storybook": "^0.0.9",
+    "vitest": "^1.6.0"
   },
   "main": "dist-electron/main.js"
 }

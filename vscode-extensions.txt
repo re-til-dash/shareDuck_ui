@@ -1,0 +1,8 @@
+dbaeumer.vscode-eslint
+esbenp.prettier-vscode
+figma.figma-vscode-extension
+joshbolduc.story-explorer
+meezilla.json
+seatonjiang.gitmoji-vscode
+stylelint.vscode-stylelint
+vitest.explorer
