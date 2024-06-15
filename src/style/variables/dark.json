@@ -216,7 +216,7 @@
             "parent": "variables/dark",
             "description": ""
         },
-        "red -700": {
+        "red-700": {
             "value": "#ff9084",
             "type": "color",
             "parent": "variables/dark",
