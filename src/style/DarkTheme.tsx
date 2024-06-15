@@ -1,14 +1,9 @@
+import { DefaultTheme } from "styled-components";
 import { color } from "./variables/dark.json";
-
-type typeChipNames = keyof typeof color;
-
-type typeTheme = {
-  [key in typeChipNames]: string;
-};
 
 //todo: colors를 입력받으면 color에서 해당 colors로 시작하는 key와 value를 반환한다.
 
-const DarkTheme: typeTheme = {
+const DarkTheme: DefaultTheme = {
   "wb-000": color["wb-000"].value,
   "wb-070": color["wb-070"].value,
   "wb-200": color["wb-200"].value,
