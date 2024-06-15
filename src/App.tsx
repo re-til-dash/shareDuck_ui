@@ -1,7 +1,6 @@
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/electron-vite.animate.svg";
-import "./App.css";
 import { ThemeProvider } from "styled-components";
 import LightTheme from "./style/LightTheme";
 
