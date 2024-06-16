@@ -1,1 +1,381 @@
-{"color":{"wb-000":{"value":"#ffffff","type":"color","parent":"variables/light","description":""},"wb-200":{"value":"#dfdae1","type":"color","parent":"variables/light","description":""},"wb-300":{"value":"#bfb7c1","type":"color","parent":"variables/light","description":""},"wb-400":{"value":"#aba5ad","type":"color","parent":"variables/light","description":""},"wb-500":{"value":"#7a757b","type":"color","parent":"variables/light","description":""},"wb-600":{"value":"#575458","type":"color","parent":"variables/light","description":""},"wb-700":{"value":"#3a373a","type":"color","parent":"variables/light","description":""},"wb-800":{"value":"#262426","type":"color","parent":"variables/light","description":""},"wb-900":{"value":"#141314","type":"color","parent":"variables/light","description":""},"wb-100":{"value":"#efe9f1","type":"color","parent":"variables/light","description":""},"vio-000":{"value":"#faeffe","type":"color","parent":"variables/light","description":""},"vio-100":{"value":"#edd6f5","type":"color","parent":"variables/light","description":""},"vio-200":{"value":"#cea9db","type":"color","parent":"variables/light","description":""},"vio-300":{"value":"#be8dcf","type":"color","parent":"variables/light","description":""},"vio-400":{"value":"#a86ebc","type":"color","parent":"variables/light","description":""},"vio-500":{"value":"#86439d","type":"color","parent":"variables/light","description":""},"vio-600":{"value":"#5a1771","type":"color","parent":"variables/light","description":""},"vio-700":{"value":"#4a0a60","type":"color","parent":"variables/light","description":""},"vio-800":{"value":"#3a084b","type":"color","parent":"variables/light","description":""},"vio-900":{"value":"#280036","type":"color","parent":"variables/light","description":""},"yel-100":{"value":"#ffe9ba","type":"color","parent":"variables/light","description":""},"yel-200":{"value":"#fedf9f","type":"color","parent":"variables/light","description":""},"yel-300":{"value":"#ffd57c","type":"color","parent":"variables/light","description":""},"yel-400":{"value":"#ffcd62","type":"color","parent":"variables/light","description":""},"yel-500":{"value":"#ffc54b","type":"color","parent":"variables/light","description":""},"yel-600":{"value":"#edae28","type":"color","parent":"variables/light","description":""},"yel-700":{"value":"#d99913","type":"color","parent":"variables/light","description":""},"yel-800":{"value":"#c08300","type":"color","parent":"variables/light","description":""},"yel-900":{"value":"#a87200","type":"color","parent":"variables/light","description":""},"yel-000":{"value":"#fff8ea","type":"color","parent":"variables/light","description":""},"red-000":{"value":"#ffe9e7","type":"color","parent":"variables/light","description":""},"red-200":{"value":"#ff9084","type":"color","parent":"variables/light","description":""},"red-300":{"value":"#ff7a6b","type":"color","parent":"variables/light","description":""},"red-400":{"value":"#ff6756","type":"color","parent":"variables/light","description":""},"red-500":{"value":"#ff503d","type":"color","parent":"variables/light","description":""},"red-600":{"value":"#ea3c29","type":"color","parent":"variables/light","description":""},"red -700":{"value":"#cc2614","type":"color","parent":"variables/light","description":""},"red-800":{"value":"#b61a08","type":"color","parent":"variables/light","description":""},"red-900":{"value":"#a51202","type":"color","parent":"variables/light","description":""},"red-100":{"value":"#ffbeb7","type":"color","parent":"variables/light","description":""},"gre-000":{"value":"#f5ffe1","type":"color","parent":"variables/light","description":""},"gre-100":{"value":"#e7f5c9","type":"color","parent":"variables/light","description":""},"gre-200":{"value":"#d0e6a5","type":"color","parent":"variables/light","description":""},"gre-300":{"value":"#c4e288","type":"color","parent":"variables/light","description":""},"gre-400":{"value":"#b9db75","type":"color","parent":"variables/light","description":""},"gre-500":{"value":"#aed267","type":"color","parent":"variables/light","description":""},"gre-600":{"value":"#92bd3d","type":"color","parent":"variables/light","description":""},"gre-700":{"value":"#74a318","type":"color","parent":"variables/light","description":""},"gre-800":{"value":"#64900b","type":"color","parent":"variables/light","description":""},"gre-900":{"value":"#4f7700","type":"color","parent":"variables/light","description":""},"tur-000":{"value":"#edfffb","type":"color","parent":"variables/light","description":""},"tur-100":{"value":"#bff6ea","type":"color","parent":"variables/light","description":""},"tur-200":{"value":"#9cecda","type":"color","parent":"variables/light","description":""},"tur-300":{"value":"#78ead0","type":"color","parent":"variables/light","description":""},"tur-400":{"value":"#54dabc","type":"color","parent":"variables/light","description":""},"tur-500":{"value":"#4dceb1","type":"color","parent":"variables/light","description":""},"tur-600":{"value":"#28b494","type":"color","parent":"variables/light","description":""},"tur-700":{"value":"#1ba485","type":"color","parent":"variables/light","description":""},"tur-800":{"value":"#129b7c","type":"color","parent":"variables/light","description":""},"tur-900":{"value":"#039272","type":"color","parent":"variables/light","description":""},"wb-070":{"value":"#ffffffb3","type":"color","parent":"variables/light","description":""}},"shadow-070":{"value":{"x":0,"y":4,"blur":4,"spread":0,"color":"#efe9f1","type":"dropShadow"},"type":"boxShadow"}}
+{
+    "color": {
+        "wb-000": {
+            "value": "#ffffff",
+            "type": "color",
+            "parent": "variables/light",
+            "description": ""
+        },
+        "wb-200": {
+            "value": "#dfdae1",
+            "type": "color",
+            "parent": "variables/light",
+            "description": ""
+        },
+        "wb-300": {
+            "value": "#bfb7c1",
+            "type": "color",
+            "parent": "variables/light",
+            "description": ""
+        },
+        "wb-400": {
+            "value": "#aba5ad",
+            "type": "color",
+            "parent": "variables/light",
+            "description": ""
+        },
+        "wb-500": {
+            "value": "#7a757b",
+            "type": "color",
+            "parent": "variables/light",
+            "description": ""
+        },
+        "wb-600": {
+            "value": "#575458",
+            "type": "color",
+            "parent": "variables/light",
+            "description": ""
+        },
+        "wb-700": {
+            "value": "#3a373a",
+            "type": "color",
+            "parent": "variables/light",
+            "description": ""
+        },
+        "wb-800": {
+            "value": "#262426",
+            "type": "color",
+            "parent": "variables/light",
+            "description": ""
+        },
+        "wb-900": {
+            "value": "#141314",
+            "type": "color",
+            "parent": "variables/light",
+            "description": ""
+        },
+        "wb-100": {
+            "value": "#efe9f1",
+            "type": "color",
+            "parent": "variables/light",
+            "description": ""
+        },
+        "vio-000": {
+            "value": "#faeffe",
+            "type": "color",
+            "parent": "variables/light",
+            "description": ""
+        },
+        "vio-100": {
+            "value": "#edd6f5",
+            "type": "color",
+            "parent": "variables/light",
+            "description": ""
+        },
+        "vio-200": {
+            "value": "#cea9db",
+            "type": "color",
+            "parent": "variables/light",
+            "description": ""
+        },
+        "vio-300": {
+            "value": "#be8dcf",
+            "type": "color",
+            "parent": "variables/light",
+            "description": ""
+        },
+        "vio-400": {
+            "value": "#a86ebc",
+            "type": "color",
+            "parent": "variables/light",
+            "description": ""
+        },
+        "vio-500": {
+            "value": "#86439d",
+            "type": "color",
+            "parent": "variables/light",
+            "description": ""
+        },
+        "vio-600": {
+            "value": "#5a1771",
+            "type": "color",
+            "parent": "variables/light",
+            "description": ""
+        },
+        "vio-700": {
+            "value": "#4a0a60",
+            "type": "color",
+            "parent": "variables/light",
+            "description": ""
+        },
+        "vio-800": {
+            "value": "#3a084b",
+            "type": "color",
+            "parent": "variables/light",
+            "description": ""
+        },
+        "vio-900": {
+            "value": "#280036",
+            "type": "color",
+            "parent": "variables/light",
+            "description": ""
+        },
+        "yel-100": {
+            "value": "#ffe9ba",
+            "type": "color",
+            "parent": "variables/light",
+            "description": ""
+        },
+        "yel-200": {
+            "value": "#fedf9f",
+            "type": "color",
+            "parent": "variables/light",
+            "description": ""
+        },
+        "yel-300": {
+            "value": "#ffd57c",
+            "type": "color",
+            "parent": "variables/light",
+            "description": ""
+        },
+        "yel-400": {
+            "value": "#ffcd62",
+            "type": "color",
+            "parent": "variables/light",
+            "description": ""
+        },
+        "yel-500": {
+            "value": "#ffc54b",
+            "type": "color",
+            "parent": "variables/light",
+            "description": ""
+        },
+        "yel-600": {
+            "value": "#edae28",
+            "type": "color",
+            "parent": "variables/light",
+            "description": ""
+        },
+        "yel-700": {
+            "value": "#d99913",
+            "type": "color",
+            "parent": "variables/light",
+            "description": ""
+        },
+        "yel-800": {
+            "value": "#c08300",
+            "type": "color",
+            "parent": "variables/light",
+            "description": ""
+        },
+        "yel-900": {
+            "value": "#a87200",
+            "type": "color",
+            "parent": "variables/light",
+            "description": ""
+        },
+        "yel-000": {
+            "value": "#fff8ea",
+            "type": "color",
+            "parent": "variables/light",
+            "description": ""
+        },
+        "red-000": {
+            "value": "#ffe9e7",
+            "type": "color",
+            "parent": "variables/light",
+            "description": ""
+        },
+        "red-200": {
+            "value": "#ff9084",
+            "type": "color",
+            "parent": "variables/light",
+            "description": ""
+        },
+        "red-300": {
+            "value": "#ff7a6b",
+            "type": "color",
+            "parent": "variables/light",
+            "description": ""
+        },
+        "red-400": {
+            "value": "#ff6756",
+            "type": "color",
+            "parent": "variables/light",
+            "description": ""
+        },
+        "red-500": {
+            "value": "#ff503d",
+            "type": "color",
+            "parent": "variables/light",
+            "description": ""
+        },
+        "red-600": {
+            "value": "#ea3c29",
+            "type": "color",
+            "parent": "variables/light",
+            "description": ""
+        },
+        "red-700": {
+            "value": "#cc2614",
+            "type": "color",
+            "parent": "variables/light",
+            "description": ""
+        },
+        "red-800": {
+            "value": "#b61a08",
+            "type": "color",
+            "parent": "variables/light",
+            "description": ""
+        },
+        "red-900": {
+            "value": "#a51202",
+            "type": "color",
+            "parent": "variables/light",
+            "description": ""
+        },
+        "red-100": {
+            "value": "#ffbeb7",
+            "type": "color",
+            "parent": "variables/light",
+            "description": ""
+        },
+        "gre-000": {
+            "value": "#f5ffe1",
+            "type": "color",
+            "parent": "variables/light",
+            "description": ""
+        },
+        "gre-100": {
+            "value": "#e7f5c9",
+            "type": "color",
+            "parent": "variables/light",
+            "description": ""
+        },
+        "gre-200": {
+            "value": "#d0e6a5",
+            "type": "color",
+            "parent": "variables/light",
+            "description": ""
+        },
+        "gre-300": {
+            "value": "#c4e288",
+            "type": "color",
+            "parent": "variables/light",
+            "description": ""
+        },
+        "gre-400": {
+            "value": "#b9db75",
+            "type": "color",
+            "parent": "variables/light",
+            "description": ""
+        },
+        "gre-500": {
+            "value": "#aed267",
+            "type": "color",
+            "parent": "variables/light",
+            "description": ""
+        },
+        "gre-600": {
+            "value": "#92bd3d",
+            "type": "color",
+            "parent": "variables/light",
+            "description": ""
+        },
+        "gre-700": {
+            "value": "#74a318",
+            "type": "color",
+            "parent": "variables/light",
+            "description": ""
+        },
+        "gre-800": {
+            "value": "#64900b",
+            "type": "color",
+            "parent": "variables/light",
+            "description": ""
+        },
+        "gre-900": {
+            "value": "#4f7700",
+            "type": "color",
+            "parent": "variables/light",
+            "description": ""
+        },
+        "tur-000": {
+            "value": "#edfffb",
+            "type": "color",
+            "parent": "variables/light",
+            "description": ""
+        },
+        "tur-100": {
+            "value": "#bff6ea",
+            "type": "color",
+            "parent": "variables/light",
+            "description": ""
+        },
+        "tur-200": {
+            "value": "#9cecda",
+            "type": "color",
+            "parent": "variables/light",
+            "description": ""
+        },
+        "tur-300": {
+            "value": "#78ead0",
+            "type": "color",
+            "parent": "variables/light",
+            "description": ""
+        },
+        "tur-400": {
+            "value": "#54dabc",
+            "type": "color",
+            "parent": "variables/light",
+            "description": ""
+        },
+        "tur-500": {
+            "value": "#4dceb1",
+            "type": "color",
+            "parent": "variables/light",
+            "description": ""
+        },
+        "tur-600": {
+            "value": "#28b494",
+            "type": "color",
+            "parent": "variables/light",
+            "description": ""
+        },
+        "tur-700": {
+            "value": "#1ba485",
+            "type": "color",
+            "parent": "variables/light",
+            "description": ""
+        },
+        "tur-800": {
+            "value": "#129b7c",
+            "type": "color",
+            "parent": "variables/light",
+            "description": ""
+        },
+        "tur-900": {
+            "value": "#039272",
+            "type": "color",
+            "parent": "variables/light",
+            "description": ""
+        },
+        "wb-070": {
+            "value": "#ffffffb3",
+            "type": "color",
+            "parent": "variables/light",
+            "description": ""
+        }
+    },
+    "shadow-070": {
+        "value": {
+            "x": 0,
+            "y": 4,
+            "blur": 4,
+            "spread": 0,
+            "color": "#efe9f1",
+            "type": "dropShadow"
+        },
+        "type": "boxShadow"
+    }
+}
