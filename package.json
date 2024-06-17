@@ -18,6 +18,9 @@
     "cli-table3": "0.6.0"
   },
   "dependencies": {
+    "@testing-library/jest-dom": "^6.4.6",
+    "@testing-library/react": "^16.0.0",
+    "@testing-library/user-event": "^14.5.2",
     "@types/styled-components": "^5.1.34",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -38,6 +41,7 @@
     "eslint": "^8.57.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
+    "jsdom": "^24.1.0",
     "path": "^0.12.7",
     "storybook": "^8.1.7",
     "token-transformer": "^0.0.33",
