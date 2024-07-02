@@ -26,6 +26,11 @@ const GlobalStyle = createGlobalStyle`
         font-weight: ${global.fontWeights.reqular};
     }
     
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box
+    }
 `;
 
 export default GlobalStyle;
