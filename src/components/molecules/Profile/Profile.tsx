@@ -1,6 +1,6 @@
-import createTypoStyle from "../../style/TypoStyle";
-import Img, { typeImgProps } from "../atoms/Img";
 import styled from "styled-components";
+import Img, { typeImgProps } from "../../atoms/Img/Img.tsx";
+import createTypoStyle from "../../../style/TypoStyle";
 
 export interface typeProfileProps extends typeImgProps {
   accountName: string;
