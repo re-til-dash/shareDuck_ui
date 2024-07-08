@@ -28,31 +28,32 @@ const StyledButton = styled.button`
 `;
 
 const CSSButtonText = createTypoStyle("typo-body-18-bold");
-const Button = ({ onClick, children }: typeButtonProps) => {
+
+function Button({ onClick, children, ...props }: typeButtonProps) {
   /* const [type, setType] = React.useState<ButtonType>("only");
   useEffect(() => {
     let hasIcon = false;
     let hasText = false;
-
+ 
     React.Children.forEach(children, (child) => {
       if (React.isValidElement(child) && child.type === Icon) hasIcon = true;
       if (React.isValidElement(child) && child.type === Button.Text)
         hasText = true;
     });
-
+ 
     if (hasIcon && hasText) setType("all");
     else setType("only");
   }, [children]); */
-
   return (
-    <StyledButton onClick={onClick} /* type={type} */>{children}</StyledButton>
+    <StyledButton onClick={onClick} {...props} /* type={type} */>
+      {children}
+    </StyledButton>
   );
-};
+}
 
-Button.Text = styled.p`
+Button.Text = styled.span`
   color: var(--wb-000);
   ${CSSButtonText}
-  font-family: 'suit';
 `;
 
 Button.Icon = Icon;

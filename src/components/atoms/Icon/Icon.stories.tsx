@@ -11,20 +11,21 @@ export default meta;
 
 type Story = StoryObj<typeof Icon>;
 
-export function Primary({ args }: Story) {
-  return <Icon name={args?.name || "message"} alt={args?.alt || "못찾을 때"} />;
-}
-
-export function Test({ args }: Story) {
-  return (
-    <StyeldTextBox>
-      <Icon name={args?.name || "message"} alt={args?.alt || "못찾을 때"} />
-    </StyeldTextBox>
-  );
-}
-
-const StyeldTextBox = styled.div`
+// 아이콘이 보이지 않아 테스트용 검정 박스
+const DarkBox = styled.div`
   width: 24px;
   height: 24px;
   background-color: black;
 `;
+
+export function Default({ args }: Story) {
+  return <Icon name={args?.name || "message"} alt={args?.alt || "못찾을 때"} />;
+}
+
+export function Dark({ args }: Story) {
+  return (
+    <DarkBox>
+      <Icon name={args?.name || "message"} alt={args?.alt || "못찾을 때"} />
+    </DarkBox>
+  );
+}

@@ -7,30 +7,30 @@ const meta: Meta<typeof Button> = {
 
 export default meta;
 
-function log() {
+function handleClick() {
   console.log("clicked");
 }
 
-export function All() {
+export function Default() {
   return (
-    <Button onClick={log}>
+    <Button onClick={handleClick}>
       <Button.Icon name={"plus"} alt={"plus"} />
       <Button.Text>New Category</Button.Text>
     </Button>
   );
 }
 
-export function Text() {
+export function TextButton() {
   return (
-    <Button onClick={log}>
+    <Button onClick={handleClick}>
       <Button.Text>Click me!</Button.Text>
     </Button>
   );
 }
 
-export function Icon() {
+export function IconButton() {
   return (
-    <Button onClick={log}>
+    <Button onClick={handleClick}>
       <Button.Icon name={"plus"} alt={"plus"} />
     </Button>
   );

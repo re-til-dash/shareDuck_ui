@@ -8329,7 +8329,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier-fallback@npm:prettier@^3, prettier@npm:^3.1.1":
+"prettier-fallback@npm:prettier@^3, prettier@npm:^3.1.1, prettier@npm:^3.3.2":
   version: 3.3.2
   resolution: "prettier@npm:3.3.2"
   bin:
@@ -9223,6 +9223,7 @@ __metadata:
     eslint-plugin-react-refresh: "npm:^0.4.5"
     jsdom: "npm:^24.1.0"
     path: "npm:^0.12.7"
+    prettier: "npm:^3.3.2"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     storybook: "npm:^8.1.7"
