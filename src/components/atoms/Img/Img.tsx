@@ -10,6 +10,6 @@ export default function Img({ src, alt, ...props }: typeImgProps) {
 const StyledImg = styled.img`
   aspect-ratio: 1/1;
   object-position: center;
-  object-fit: contain;
-  ${(props) => (props.style ? { ...props.style } : "")}
+  object-fit: cover;
+  ${props => (props.style ? { ...props.style } : "")}
 `;
