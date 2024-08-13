@@ -3,11 +3,15 @@ import styled from "styled-components";
 import createTypoStyle from "../../../style/TypoStyle";
 import Icon from "../../atoms/Icon/Icon";
 import React from "react";
+import SubButton from "../../atoms/SubButton/SubButton";
 
-interface typeButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  isSelected: boolean;
-  lists: React.ReactNode[];
+export interface typeListButtonProps
+  extends ButtonHTMLAttributes<HTMLButtonElement> {
+  isSelected?: boolean;
+  options?: string[];
 }
+
+const CSSButtonText = createTypoStyle("typo-body-14-bold");
 
 const StyledButton = styled.button<{
   $isSelected: boolean;
@@ -43,49 +47,41 @@ const FlexBox = styled.div<{ $childCount: number }>`
   width: ${props => (props.$childCount > 1 ? "240px" : "52px")};
 `;
 
-const CSSButtonText = createTypoStyle("typo-body-14-bold");
-
 function ListButton({
   isSelected,
   children,
-  lists,
+  options,
   ...props
-}: typeButtonProps) {
+}: typeListButtonProps) {
   const childCount = React.Children.count(children);
   return (
-    <FlexBox $childCount={childCount}>
-      <StyledButton $isSelected={isSelected} {...props}>
+    <FlexBox $childCount={childCount} id="flex">
+      <StyledButton $isSelected={Boolean(isSelected)} {...props}>
         <GapBox>{children}</GapBox>
         {childCount > 1 && (
           <Icon name={`arrow_${isSelected ? "up" : "down"}`} alt="arrow" />
         )}
       </StyledButton>
-      {isSelected && childCount > 1 && lists.map(list => list)}
+      {isSelected &&
+        options &&
+        childCount > 1 &&
+        options.map(option => (
+          <ListButton.SubButton key={option} isSelected={false}>
+            {option}
+          </ListButton.SubButton>
+        ))}
     </FlexBox>
   );
 }
 
-ListButton.SubButton = styled.button<{ $isSelected: boolean }>`
-  background-color: var(--wb-000);
-  border: none;
-  border-radius: 8px;
-  width: 200px;
-  height: 52px;
-  padding: 0 8px;
-  display: flex;
-  align-items: center;
-  color: ${props => (props.$isSelected ? "var(--vio-500)" : "var(--wb-500)")};
-  &:hover {
-    ${props =>
-      !props.$isSelected && "background-color: rgba(20, 19, 20, 0.05);"}
-  }
-  ${CSSButtonText}
-`;
+ListButton.FlexBox = FlexBox;
 
 ListButton.Text = styled.span`
   color: var(--wb-700);
   ${CSSButtonText}
 `;
+
+ListButton.SubButton = SubButton;
 
 ListButton.Icon = Icon;
 

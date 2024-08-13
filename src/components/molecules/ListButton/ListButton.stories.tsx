@@ -12,19 +12,10 @@ const options = ["Overview", "Post"];
 
 export function Default() {
   const [isSelected, setIsSelected] = useState(false);
-  const [slectIndex, setSelectIndex] = useState(0);
   return (
     <ListButton
       isSelected={isSelected}
-      lists={options.map((option, index) => (
-        <ListButton.SubButton
-          key={index}
-          $isSelected={slectIndex === index}
-          onClick={() => setSelectIndex(index)}
-        >
-          {option}
-        </ListButton.SubButton>
-      ))}
+      options={options}
       onClick={function handleClick() {
         setIsSelected(!isSelected);
       }}
@@ -40,7 +31,7 @@ export function IconStory() {
   return (
     <ListButton
       isSelected={isSelected}
-      lists={[]}
+      options={[]}
       onClick={function handleClick() {
         setIsSelected(!isSelected);
       }}
