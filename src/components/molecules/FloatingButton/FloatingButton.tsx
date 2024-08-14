@@ -23,8 +23,17 @@ const StyledButton = styled.button`
   }
 `;
 
+const RePos = styled.div`
+  margin-left: 2px;
+  margin-top: 2px;
+`;
+
 function FloatingButton({ children, ...props }: typeButtonProps) {
-  return <StyledButton {...props}>{children}</StyledButton>;
+  return (
+    <StyledButton {...props}>
+      <RePos>{children}</RePos>
+    </StyledButton>
+  );
 }
 
 FloatingButton.Icon = Icon;
