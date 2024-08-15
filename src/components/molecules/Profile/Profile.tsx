@@ -1,28 +1,63 @@
 import styled from "styled-components";
 import Img, { typeImgProps } from "../../atoms/Img/Img.tsx";
 import createTypoStyle from "../../../style/TypoStyle";
+import { PropsWithChildren, useContext,createContext } from "react";
 
-export interface typeProfileProps extends typeImgProps {
+interface typeProfileImgProps extends typeImgProps {
+  src: string;
+  alt?: string;
+}
+
+interface typeProfileNameProps {
   accountName: string;
+}
+
+interface typeProfileIdProps {
   accountID: string;
 }
 
-export default function Profile({
-  src,
-  alt,
-  accountName,
-  accountID,
-}: typeProfileProps) {
+export interface typeProfileProps
+  extends PropsWithChildren,
+    typeProfileIdProps,
+    typeProfileNameProps,
+    typeProfileImgProps {}
+
+const ProfileContext = createContext({});
+
+function Group({ children }: PropsWithChildren) {
+  const props = useContext(ProfileContext);
+  return <div {...props}>{children}</div>;
+}
+
+function Name({ accountName }: typeProfileNameProps) {
+  const props = useContext(ProfileContext);
+  return <ProfileName {...props}>{accountName}</ProfileName>;
+}
+
+function Id({ accountID }: typeProfileIdProps) {
+  const props = useContext(ProfileContext);
+  return <ProfileID {...props}>@{accountID}</ProfileID>;
+}
+
+function Image({ src, alt }: typeProfileImgProps) {
+  const props = useContext(ProfileContext);
+  return <ProfileImg src={src} alt={alt} {...props} />;
+}
+
+function Profile({ children, ...props }: PropsWithChildren) {
   return (
-    <ProfileContainer>
-      <ProfileImg src={src} alt={alt} />
-      <div>
-        <ProfileName>{accountName}</ProfileName>
-        <ProfileID>@{accountID}</ProfileID>
-      </div>
-    </ProfileContainer>
+    <ProfileContext.Provider value={props}>
+      <ProfileContainer {...props}>{children}</ProfileContainer>
+    </ProfileContext.Provider>
   );
 }
+
+Profile.Img = Image;
+Profile.Group = Group;
+Profile.Name = Name;
+Profile.Id = Id;
+
+export default Profile;
 
 const ProfileContainer = styled.div`
   display: flex;
@@ -47,7 +82,7 @@ const ProfileName = styled.p`
 `;
 const ProfileID = styled.p`
   ${CSSProfileID}
-  color: var(--color-wb-300, #BFB7C1);
+  color: var(--wb-300);
 `;
 const ProfileImg = styled(Img)`
   border-radius: 50%;
