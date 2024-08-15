@@ -2,7 +2,7 @@ import { DefaultTheme, createGlobalStyle } from "styled-components";
 import global from "./global.json";
 
 //GPT
-function createThemeVariables(theme: DefaultTheme): string {
+function createThemeVariables(theme: DefaultTheme) {
   return Object.keys(theme)
     .map(
       (key) =>
