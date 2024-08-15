@@ -1,7 +1,7 @@
+import styled from "styled-components";
 import Img, { typeImgProps } from "../../atoms/Img/Img.tsx";
 import createTypoStyle from "../../../style/TypoStyle";
-import { createContext, PropsWithChildren, useContext } from "react";
-import styled from "styled-components";
+import { PropsWithChildren, useContext,createContext } from "react";
 
 interface typeProfileImgProps extends typeImgProps {
   src: string;
