@@ -1,14 +1,15 @@
 import { HTMLAttributes } from "react";
 import styled from "styled-components";
 
-interface typeTagProps extends HTMLAttributes<HTMLSpanElement>{
-    disabled?: boolean
+export interface typeTagProps extends HTMLAttributes<HTMLSpanElement>{
+    content: string;
 }
 
 const DefaultTag = styled.span`
     border-radius: 9999px;
     padding: 1em;
 `
+
 const PrimaryTag = styled(DefaultTag)`
     border: 1px solid var(--vio-400);
     background:var(--vio-100);
@@ -28,8 +29,9 @@ const BasicTag = styled(DefaultTag)`
     background: #F2F2F2;
     padding: 3px 23px;
 `
-function Tag({children, ...props}:typeTagProps){
-    return <DefaultTag  {...props}>{children}</DefaultTag>
+
+function Tag({content, ...props}:typeTagProps){
+    return <DefaultTag  {...props}>{content}</DefaultTag>
 }
 
 Tag.Primary = PrimaryTag;
