@@ -3,11 +3,7 @@ name: "Chromatic Deployment"
 
 # Event for the workflow
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - "src/components/*"
+  push
 
 # List of jobs
 jobs:
