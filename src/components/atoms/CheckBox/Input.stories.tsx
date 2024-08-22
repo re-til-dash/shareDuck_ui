@@ -7,6 +7,7 @@ const meta: Meta<typeof CheckBox> = {
   component: CheckBox,
   args: {
     label: undefined,
+    disabled: false,
   },
 };
 
