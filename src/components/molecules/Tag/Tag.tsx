@@ -2,7 +2,6 @@ import { HTMLAttributes } from "react";
 import styled from "styled-components";
 
 export interface typeTagProps extends HTMLAttributes<HTMLSpanElement>{
-    content: string;
 }
 
 const DefaultTag = styled.span`
@@ -30,8 +29,8 @@ const BasicTag = styled(DefaultTag)`
     padding: 3px 23px;
 `
 
-function Tag({content, ...props}:typeTagProps){
-    return <DefaultTag  {...props}>{content}</DefaultTag>
+function Tag({children, ...props}:typeTagProps){
+    return <DefaultTag  {...props}>{children}</DefaultTag>
 }
 
 Tag.Primary = PrimaryTag;
