@@ -7,9 +7,6 @@
     "url": "https://github.com/re-til-dash/shareDuck_ui",
     "directory": "src/*"
   },
-  "bin": {
-    "log-run": "lib.js"
-  },
   "license": "MIT",
   "keywords": [
     "shareDuck",
