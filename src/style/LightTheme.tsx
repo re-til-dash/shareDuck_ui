@@ -1,6 +1,5 @@
 import { DefaultTheme } from "styled-components";
 import { color } from "./variables/light.json";
-import { typeColorKeys } from "../types/styled";
 //todo: colors를 입력받으면 color에서 해당 colors로 시작하는 key와 value를 반환한다.
 
 // const LightTheme: DefaultTheme = {
@@ -68,7 +67,7 @@ import { typeColorKeys } from "../types/styled";
 // };
 
 const LightTheme: DefaultTheme = Object.keys(color).reduce((theme, key) => {
-  theme[key] = color[key as typeColorKeys].value;
+  theme[key] = color[key as keyof typeof color].value;
   return theme;
 }, {} as DefaultTheme);
 
