@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Img, { typeImgProps } from "../../atoms/Img/Img.tsx";
+import Img, { typeImgProps } from "../../atoms/Img/Img";
 import createTypoStyle from "../../../style/TypoStyle";
 import { PropsWithChildren, useContext,createContext } from "react";
 

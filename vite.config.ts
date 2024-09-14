@@ -1,5 +1,6 @@
 import { InlineConfig, UserConfig, defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+import path from "path";
 
 interface VitestConfigExport extends UserConfig {
   test: InlineConfig;
@@ -11,8 +12,8 @@ export default defineConfig({
   build: {
     rollupOptions: {
        lib:{
-          entry:'lib.js',
-          name:'shareduck-ui',
+          entry: path.resolve(__dirname, "src/index.tsx"),
+          name:'index',
           fileName:'index'
       },
       output: {
@@ -31,6 +32,9 @@ export default defineConfig({
         chunkFileNames: "assets/js/[name]-[hash].js",
         entryFileNames: "assets/js/[name]-[hash].js",
       },
+    },
+     commonjsOptions: {
+      esmExternals: ["react"],
     },
   },
   test: {
