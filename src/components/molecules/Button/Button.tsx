@@ -17,14 +17,16 @@ export interface typeButtonProps
 const StyledButton = styled.button`
   background-color: var(--vio-300);
   min-width: 52px;
-  height: 52px;
   border: none;
   border-radius: 8px;
   display: flex;
   align-items: center;
   gap: 16px;
-  padding: 0 14px;
-  margin-right: auto;
+  padding: 14px;
+
+  & > :first-child {
+    margin-right: auto;
+  }
 `;
 
 const CSSButtonText = createTypoStyle("typo-body-18-bold");
