@@ -4,7 +4,7 @@ import createTypoStyle from "../../../style/TypoStyle";
 import Icon from "../../atoms/Icon/Icon";
 import React from "react";
 
-interface typeButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+export interface typeListButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   isSelected: boolean;
   lists: React.ReactNode[];
 }
@@ -50,7 +50,7 @@ function ListButton({
   children,
   lists,
   ...props
-}: typeButtonProps) {
+}: typeListButtonProps) {
   const childCount = React.Children.count(children);
   return (
     <FlexBox $childCount={childCount}>
