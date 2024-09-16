@@ -1,5 +1,7 @@
-type Props = { name: string; alt: string };
+import Img from "../Img/Img";
 
-export default function Icon({ name, alt }: Props) {
-  return <img src={`/icons/${name}.svg`} alt={alt} width={24} height={24} />;
+export interface typeIconProps { src: string; alt: string; }
+
+export default function Icon({ src, alt }: typeIconProps) {
+  return <Img src={src} alt={alt} width={24} height={24} />;
 }
