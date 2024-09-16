@@ -1,14 +1,37 @@
 {
   "name": "shareduck-ui",
-  "private": true,
-  "version": "0.0.0",
+  "version": "0.0.21",
   "type": "module",
+  "author": "shareoluck",
+  "repository": {
+    "url": "https://github.com/re-til-dash/shareDuck_ui",
+    "directory": "src/*"
+  },
+  "license": "MIT",
+  "keywords": [
+    "shareDuck",
+    "shareoluck"
+  ],
+  "files": [
+    "dist",
+    "package.json"
+  ],
+  "main": "dist/cjs/index.cjs.js",
+  "module": "dist/es/index.es.js",
+  "types": "dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/es/index.es.js",
+      "require": "./dist/cjs/index.cjs.cjs",
+      "types": "./dist/types/index.d.ts"
+    }
+  },
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "rm -fr ./dist && tsc -p tsconfig.json && tsc -p tsconfig-cjs.json && chmod +x ./fixup.sh && ./fixup.sh && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "token-transformer": " node  ./src/config/tokenTransformer.js",
+    "token-transformer": "node  ./src/config/tokenTransformer.js",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "test": "vitest"
@@ -17,16 +40,18 @@
     "string-width": "4.2.3",
     "cli-table3": "0.6.0"
   },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "styled-components": "^6.1.11"
+  },
   "dependencies": {
     "@testing-library/dom": "^10.3.0",
     "@testing-library/jest-dom": "^6.4.6",
     "@testing-library/react": "^16.0.0",
     "@testing-library/user-event": "^14.5.2",
     "@types/styled-components": "^5.1.34",
-    "prettier": "^3.3.2",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "styled-components": "^6.1.11"
+    "prettier": "^3.3.2"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^8.1.7",
@@ -57,6 +82,8 @@
     "vite-storybook": "^0.0.9",
     "vitest": "^1.6.0"
   },
-  "main": "dist-electron/main.js",
-  "packageManager": "yarn@4.4.0"
+  "packageManager": "yarn@4.4.0",
+  "engines": {
+    "yarn": "~4.4.0"
+  }
 }

@@ -1,5 +1,5 @@
 import { css } from "styled-components";
-import global from "./global.json";
+import global from "../../public/global.json";
 
 type typeTypoKeys = typeof global.typo;
 

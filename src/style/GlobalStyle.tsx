@@ -1,5 +1,6 @@
 import { DefaultTheme, createGlobalStyle } from "styled-components";
-import global from "./global.json";
+import global from "../../public/global.json";
+
 
 //GPT
 function createThemeVariables(theme: DefaultTheme) {
