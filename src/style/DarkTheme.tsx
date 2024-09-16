@@ -1,5 +1,6 @@
 import { DefaultTheme } from "styled-components";
-import { color } from "./variables/dark.json";
+import { color } from  "../../public/variables/dark.json";
+
 
 //todo: colors를 입력받으면 color에서 해당 colors로 시작하는 key와 value를 반환한다.
 

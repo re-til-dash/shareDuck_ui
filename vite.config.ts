@@ -1,5 +1,6 @@
 import { InlineConfig, UserConfig, defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+// import json from "@rollup/plugin-json";
 import path from "path";
 interface VitestConfigExport extends UserConfig {
   test: InlineConfig;
@@ -18,10 +19,10 @@ export default defineConfig({
 
     rollupOptions: {
       //제외할 dependencies 혹은 파일들 설정
-      external: ['react', 'react-dom'],
+      external: ['react', 'react-dom', 'styled-components', 'react/jsx-runtime'],
        input: {
         index: './src/index.tsx',
-        packageJson: './package.json' // package.json 포함
+        packageJson: "./package.json"
       },
        output: [
       {

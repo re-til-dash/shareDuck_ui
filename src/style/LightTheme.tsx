@@ -1,5 +1,6 @@
 import { DefaultTheme } from "styled-components";
-import { color } from "./variables/light.json";
+
+import { color } from "../../public/variables/light.json";
 //todo: colors를 입력받으면 color에서 해당 colors로 시작하는 key와 value를 반환한다.
 
 // const LightTheme: DefaultTheme = {
@@ -66,9 +67,11 @@ import { color } from "./variables/light.json";
 //   "tur-900": color["tur-900"].value,
 // };
 
-const LightTheme: DefaultTheme = Object.keys(color).reduce((theme, key) => {
-  theme[key] = color[key as keyof typeof color].value;
-  return theme;
+const LightTheme = Object.keys(color).reduce((theme, key) => {
+    return {
+    ...theme,
+    [key]: color[key as keyof typeof color].value
+  };
 }, {} as DefaultTheme);
 
 export default LightTheme;

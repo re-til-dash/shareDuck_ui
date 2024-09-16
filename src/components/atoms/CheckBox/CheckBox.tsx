@@ -1,5 +1,5 @@
 import { InputHTMLAttributes } from "react";
-import { styled } from "styled-components";
+import styled  from "styled-components";
 import createTypoStyle from "../../../style/TypoStyle";
 
 export interface typeInputProps extends InputHTMLAttributes<HTMLInputElement> {
