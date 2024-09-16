@@ -13,6 +13,10 @@ const meta: Meta<typeof CheckBox> = {
 
 export default meta;
 
-export function CheckBoxStory(args: typeInputProps) {
+export function DefaultStory(args: typeInputProps) {
   return <CheckBox {...args} />;
+}
+
+export function LabelStory(args: typeInputProps) {
+  return <CheckBox {...args} label="checkbox"/>;
 }
