@@ -1,7 +1,6 @@
 import { InlineConfig, UserConfig, defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import path from "path";
-
 interface VitestConfigExport extends UserConfig {
   test: InlineConfig;
 }
@@ -10,28 +9,33 @@ interface VitestConfigExport extends UserConfig {
 export default defineConfig({
   plugins: [react()],
   build: {
+    lib: {
+      entry: path.resolve(__dirname, 'src/index.tsx'), // Path to your entry file
+      name: 'ShareDuck', // Global name in UMD build
+      
+    },
+    publicDir: 'public',
+
     rollupOptions: {
-       lib:{
-          entry: path.resolve(__dirname, "src/index.tsx"),
-          name:'index',
-          fileName:'index'
+      //제외할 dependencies 혹은 파일들 설정
+      external: ['react', 'react-dom', '**/*.stories.*', "styled-components"],
+       input: {
+        index: './src/index.tsx',
+        packageJson: './package.json' // package.json 포함
       },
-      output: {
-        external:['react','react-dom'],
-        globals:{
-            react:'React',
-            'react-dom':'ReactDOM'
-        },
-        assetFileNames: (assetInfo) => {
-          let extType = assetInfo?.name?.split(".").at(1);
-          if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(extType!)) {
-            extType = "img";
-          }
-          return `assets/${extType}/[name]-[hash][extname]`;
-        },
-        chunkFileNames: "assets/js/[name]-[hash].js",
-        entryFileNames: "assets/js/[name]-[hash].js",
+       output: [
+      {
+        format: 'es',
+        dir: 'dist/es',  // ESM 모듈 출력
+        entryFileNames: '[name].[format].js',
       },
+      {
+        format: 'cjs',
+        dir: 'dist/cjs',  // CommonJS 모듈 출력
+        entryFileNames: '[name].[format].js',
+      },
+    ],
+
     },
      commonjsOptions: {
       esmExternals: ["react"],

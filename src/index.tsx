@@ -18,4 +18,5 @@ export {default as Profile} from './components/molecules/Profile/Profile';
 
 
 //hooks
+// eslint-disable-next-line react-refresh/only-export-components
 export {default as useTimeStamp} from './hooks/useTimeStamp';

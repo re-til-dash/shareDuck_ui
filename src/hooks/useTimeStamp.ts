@@ -1,3 +1,5 @@
+export type typeUseTimeStamp = (timestamp: number) => {[key:string]:string}
+
 
 //24시간 이전과 현재 시간의 차이  86,400,000
 //48시간 이전과 현재 시간의 차이 172,800,000
@@ -5,7 +7,8 @@ const DAY = 86400000;
 const HOUR = 3600000;
 const MIN = Math.round(HOUR / 60);
 const SEC =  Math.round(MIN / 60);
-const useTimeStamp = (timestamp: number) => {
+
+const useTimeStamp:typeUseTimeStamp = (timestamp) => {
     //db에서 받은 시간
     const serverDate = new Date(timestamp);
     

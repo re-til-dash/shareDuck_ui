@@ -4,7 +4,7 @@ cat >dist/cjs/package.json <<!EOF
 }
 !EOF
 
-cat >dist/mjs/package.json <<!EOF
+cat >dist/es/package.json <<!EOF
 {
     "type": "module"
 }

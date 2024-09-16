@@ -3,7 +3,8 @@
   "compilerOptions": {
     "moduleResolution": "Bundler",
     "module": "esnext",
-    "outDir": "dist/mjs",
-    "target": "esnext"
+    "outDir": "./dist/es",
+    "target": "esnext",
+    
   }
 }

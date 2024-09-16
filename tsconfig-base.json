@@ -5,6 +5,7 @@
     "allowSyntheticDefaultImports": true,
     "baseUrl": "src",
     "declaration": true,
+    "declarationDir": "./dist/types", 
     "esModuleInterop": true,
     "inlineSourceMap": false,
     "listEmittedFiles": false,
@@ -21,7 +22,6 @@
     "strictNullChecks": false,
     "jsx": "react-jsx",
     "sourceMap": true,
-    
     "typeRoots": [
       "src/types"
     ],

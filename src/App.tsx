@@ -5,7 +5,6 @@ function App() {
 
   return (
     <ThemeProvider theme={LightTheme}>
-      
     </ThemeProvider>
   );
 }
