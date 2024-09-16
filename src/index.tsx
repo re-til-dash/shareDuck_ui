@@ -20,3 +20,8 @@ export {default as Profile} from './components/molecules/Profile/Profile';
 //hooks
 // eslint-disable-next-line react-refresh/only-export-components
 export {default as useTimeStamp} from './hooks/useTimeStamp';
+
+
+//theme
+export {default as LightTheme} from './style/LightTheme'
+export {default as DarkTheme} from './style/DarkTheme'
