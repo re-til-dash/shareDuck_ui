@@ -18,7 +18,7 @@ export default defineConfig({
 
     rollupOptions: {
       //제외할 dependencies 혹은 파일들 설정
-      external: ['react', 'react-dom', '**/*.stories.*'],
+      external: ['react', 'react-dom'],
        input: {
         index: './src/index.tsx',
         packageJson: './package.json' // package.json 포함
