@@ -11,11 +11,23 @@ const meta: Meta<typeof Details> = {
 
 export default meta;
 
-const options = ["Overview", "Post"];
+const options = [
+  {id: "Overview", list:
+  
+  <Details.Text>Overview</Details.Text>
+  
+}, 
+  {id: "Post", list:
+  
+  <Details.Text>Post</Details.Text>
+  }
+];
 
 export function Default() {
   const [isSelected, setIsSelected] = useState(false);
-  return (
+  const [show, setShow] = useState(false);
+  return (<>
+  <button onClick={()=> setShow(!show)}>show toggle icon</button>
     <Details
       open={isSelected}
       lists={options}
@@ -24,13 +36,13 @@ export function Default() {
       }}
     >
       <Details.Icon src={ExampleIcon} alt="message" />
-      <Details.Text>New Category</Details.Text>
-     {isSelected ?
+      <Details.Text style={{color: "var(--wb-700)"}}>New Category</Details.Text>
+     {show && (isSelected  ?
      <Details.Icon src={ArrowDownIcon} alt="message" /> 
-     
-    : <Details.Icon src={ArrowUpIcon} alt="message" /> 
+    : <Details.Icon src={ArrowUpIcon} alt="message" /> )
      }
     </Details>
+    </>
   );
 }
 

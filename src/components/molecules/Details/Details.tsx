@@ -1,27 +1,28 @@
-import {  DetailsHTMLAttributes, MouseEventHandler, useState } from "react";
+import {  DetailsHTMLAttributes, MouseEventHandler, ReactNode, useState } from "react";
 import styled from "styled-components";
 import createTypoStyle from "../../../style/TypoStyle";
 import Icon from "../../atoms/Icon/Icon";
 
 interface typeDetailsProps extends DetailsHTMLAttributes<HTMLDetailsElement> {
-  lists: string[];
+  lists: {id: string, list: ReactNode }[];
 }
 
+const MAX_WIDTH = "152px";
 
 const CSSButtonText = createTypoStyle("typo-body-14-bold");
 
 function Details({
   children,
-  lists = [],
+  lists,
   open = false,
   ...props
 }: typeDetailsProps) {
 
   const [selected, setSelected] = useState("Overview");
 
-  const handleClickList = (list: string):MouseEventHandler=> (e) => {
+  const handleClickList = (id: string):MouseEventHandler=> (e) => {
     e.stopPropagation();
-    setSelected(list)
+    setSelected(id)
   }
 
   return (
@@ -29,22 +30,31 @@ function Details({
       <summary  >
         {children}
       </summary>
-       {lists.length && <StyledUlist>{lists.map((list,index) => <StyledList isSelected={selected === list} key={"list" +index} onClick={handleClickList(list)}>{list}</StyledList>)}</StyledUlist>}
+       {lists.length && 
+       <StyledUlist>
+        {lists.map(({id, list}) => 
+          (<StyledList isSelected={selected == id} key={id} onClick={handleClickList(id)}>
+        {list}
+        </StyledList>))}
+        </StyledUlist>}
     </StyledDetails>
   );
 }
 
-Details.Text = styled.p`
-  color: var(--wb-700);
-  flex-shrink: 0;
-  flex-basis: 100%;
-
+Details.Text = styled.span`
   ${CSSButtonText}
+
+  @media  (max-width: ${MAX_WIDTH}) {
+    &{
+      display: none;
+    }
+  }
 `;
 
 Details.Icon = Icon;
 
 const StyledDetails = styled.details`
+  width: 100%;
   & > * {
     list-style-type: none; /* 그 외의 브라우저용 사용자 정의 스타일 */
   }
@@ -54,6 +64,8 @@ const StyledDetails = styled.details`
       justify-content: start;
       align-items: center;
       gap: 16px;
+
+      
   }
 
   & > summary > :nth-child(2){
@@ -64,11 +76,23 @@ const StyledDetails = styled.details`
     border-radius: 8px;
     background: var(--vio-000, #FAEFFE);
   }
+
+  
 `
 
 const StyledUlist = styled.ul`
   margin-left: auto;
   width: calc(100% - 52px);
+
+  @media  (max-width:  ${MAX_WIDTH}) {
+    &{
+      margin: 0;
+    }
+
+    & > li img {
+      width: 16px;
+    }
+  }
  
 `
 
@@ -77,16 +101,20 @@ const StyledList = styled.li<{ isSelected: boolean}>`
     background-color: var(--wb-000);
     border: none;
     border-radius: 8px;
-    height: 52px;
-    padding: 0 8px;
+    padding: 14px 8px;
+
     display: flex;
     align-items: center;
-    color: ${props => (props.isSelected ? "var(--vio-500)" : "var(--wb-500)")};
+    gap: 8px;
+    color: ${props => props.isSelected ? "var(--vio-500)" : "var(--wb-300)"};
+
     &:hover {
       ${props =>
         !props.isSelected && "background-color: rgba(20, 19, 20, 0.05);"}
     }
     ${CSSButtonText}
+
+  
 `
 
 export default Details;
