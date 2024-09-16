@@ -1,3 +1,4 @@
+
 //atoms
 export {default as CheckBox} from './components/atoms/CheckBox/CheckBox';
 export {default as Icon} from './components/atoms/Icon/Icon';
@@ -25,3 +26,11 @@ export {default as useTimeStamp} from './hooks/useTimeStamp';
 //theme
 export {default as LightTheme} from './style/LightTheme'
 export {default as DarkTheme} from './style/DarkTheme'
+
+export {default as GlobalStyle} from './style/GlobalStyle'
+export {default as TypoStyle} from './style/TypoStyle'
+
+/* eslint-disable react-refresh/only-export-components */
+export {default as globalStyles} from './style/global.json'
+export {default as lightStyles} from './style/variables/light.json'
+export {default as darkStyles} from './style/variables/dark.json'
