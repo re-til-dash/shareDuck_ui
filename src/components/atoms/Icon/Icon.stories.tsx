@@ -19,13 +19,13 @@ const DarkBox = styled.div`
 `;
 
 export function Default({ args }: Story) {
-  return <Icon name={args?.name || "message"} alt={args?.alt || "못찾을 때"} />;
+  return <Icon src={args?.src } alt={args?.alt || "못찾을 때"} />;
 }
 
 export function Dark({ args }: Story) {
   return (
     <DarkBox>
-      <Icon name={args?.name || "message"} alt={args?.alt || "못찾을 때"} />
+      <Icon src={args?.src} alt={args?.alt || "못찾을 때"} />
     </DarkBox>
   );
 }

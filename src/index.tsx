@@ -9,7 +9,7 @@ export {default as Input} from './components/atoms/Input/Input';
 //mocules
 export {default as Button} from './components/molecules/Button/Button';
 export {default as FloatingButton} from './components/molecules/FloatingButton/FloatingButton';
-export {default as ListButton} from './components/molecules/ListButton/ListButton';
+export {default as Details} from './components/molecules/Details/Details';
 export {default as Tag} from './components/molecules/Tag/Tag';
 export {default as Profile} from './components/molecules/Profile/Profile';
 
