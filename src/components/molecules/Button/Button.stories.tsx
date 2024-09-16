@@ -1,5 +1,6 @@
 import Button from "./Button";
 import { Meta } from "@storybook/react";
+import PlusIcon from '../../../../public/icons/plus.svg'
 
 const meta: Meta<typeof Button> = {
   component: Button,
@@ -14,7 +15,7 @@ function handleClick() {
 export function Default() {
   return (
     <Button onClick={handleClick}>
-      <Button.Icon name={"plus"} alt={"plus"} />
+      <Button.Icon src={PlusIcon} alt={"plus"} />
       <Button.Text>New Category</Button.Text>
     </Button>
   );
@@ -31,7 +32,7 @@ export function TextButton() {
 export function IconButton() {
   return (
     <Button onClick={handleClick}>
-      <Button.Icon name={"plus"} alt={"plus"} />
+      <Button.Icon src={PlusIcon} alt={"plus"} />
     </Button>
   );
 }
