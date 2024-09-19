@@ -2,6 +2,7 @@ import {  DetailsHTMLAttributes, MouseEventHandler, ReactNode, useState } from "
 import styled from "styled-components";
 import createTypoStyle from "../../../style/TypoStyle";
 import Icon from "../../atoms/Icon/Icon";
+import List from "../../atoms/List/List";
 
 interface typeDetailsProps extends DetailsHTMLAttributes<HTMLDetailsElement> {
   lists: {id: string, list: ReactNode }[];
@@ -30,7 +31,7 @@ function Details({
       <summary  >
         {children}
       </summary>
-       {lists.length && 
+       {lists.length > 0 && 
        <StyledUlist>
         {lists.map(({id, list}) => 
           (<StyledList isSelected={selected == id} key={id} onClick={handleClickList(id)}>
@@ -96,25 +97,8 @@ const StyledUlist = styled.ul`
  
 `
 
-const StyledList = styled.li<{ isSelected: boolean}>`
-    width: 100%;
-    background-color: var(--wb-000);
-    border: none;
-    border-radius: 8px;
-    padding: 14px 8px;
-
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: ${props => props.isSelected ? "var(--vio-500)" : "var(--wb-300)"};
-
-    &:hover {
-      ${props =>
-        !props.isSelected && "background-color: rgba(20, 19, 20, 0.05);"}
-    }
+const StyledList = styled(List)<{ isSelected: boolean}>`
     ${CSSButtonText}
-
-  
 `
 
 export default Details;

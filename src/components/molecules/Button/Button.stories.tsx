@@ -1,6 +1,6 @@
 import Button from "./Button";
 import { Meta } from "@storybook/react";
-import PlusIcon from '../../../../public/icons/plus.svg'
+import PlusIcon from '/icons/plus.svg'
 
 const meta: Meta<typeof Button> = {
   component: Button,
