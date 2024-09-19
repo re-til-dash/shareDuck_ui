@@ -98,7 +98,15 @@ const StyledUlist = styled.ul`
 `
 
 const StyledList = styled(List)<{ isSelected: boolean}>`
+    color: ${props => props.isSelected ? "var(--vio-500)" : "var(--wb-300)"};
+
+    &:hover {
+      ${props =>
+        !props.isSelected && "background-color: rgba(20, 19, 20, 0.05);"}
+    }
     ${CSSButtonText}
+
+  
 `
 
 export default Details;
