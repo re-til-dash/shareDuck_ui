@@ -1,30 +1,31 @@
-# React + TypeScript + Vite
+# shareDuck-ui
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+shareDuck 프로젝트를 위해 개발한 UI 라이브러리입니다.
+React, Styled-components, Vite 환경에서 개발하였습니다.
 
-Currently, two official plugins are available:
+## 사용자를 위한 설명
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 설치하기
+```
+npm install shareduck-ui@latest
 
-## Expanding the ESLint configuration
+or
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+yarn add shareduck-ui@latest
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- 해당 레포지토리에 기여하고 싶다면, 언제든 PR을 올려주세요!
+
+## 팀원을 위한 설명
+
+라이브러리에 추가하여 배포하는 과정
+
+1. src/index.tsx에 해당 내용을 다음과 같이 작성합니다. 작성 위치는 해당 파일의 주석을 참고해주세요!
+```
+export {default as CheckBox} from './components/atoms/CheckBox/CheckBox';
+```
+2. `yarn build`를 통해 dist 폴더를 새로 생성합니다.
+  - 이때, build 오류를 꼭 해결할 것!
+3. `package.json` 파일의 버전을 올립니다. 
+4. `yarn npm publish`로 dist 폴더를 배포합니다.
