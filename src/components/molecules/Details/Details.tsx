@@ -105,8 +105,6 @@ const StyledList = styled(List)<{ isSelected: boolean}>`
         !props.isSelected && "background-color: rgba(20, 19, 20, 0.05);"}
     }
     ${CSSButtonText}
-
-  
 `
 
 export default Details;
