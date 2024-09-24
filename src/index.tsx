@@ -33,12 +33,12 @@ export {default as GlobalStyle} from './style/GlobalStyle'
 export {default as TypoStyle} from './style/TypoStyle'
 
 //icons
-export {default as CloseIcon} from '/icons/titlebar-close.svg';
-export {default as SizeIcon} from '/icons/titlebar-size.svg';
-export {default as DownIcon} from '/icons/titlebar-min.svg';
-export {default as ArrowLeftIcon} from '/icons/arrow-left.svg';
-export {default as ArrowRightIcon} from '/icons/arrow-right.svg';
-export {default as HomeIcon} from '/icons/home.svg';
-export {default as SearchIcon} from '/icons/search.svg';
-export {default as SettingIcon} from '/icons/setting.svg';
-export {default as PlusIcon} from '/icons/plus.svg';
+export {default as CloseIcon} from '../public/icons/titlebar-close.svg';
+export {default as SizeIcon} from '../public/icons/titlebar-size.svg';
+export {default as DownIcon} from '../public/icons/titlebar-min.svg';
+export {default as ArrowLeftIcon} from '../public/icons/arrow-left.svg';
+export {default as ArrowRightIcon} from '../public/icons/arrow-right.svg';
+export {default as HomeIcon} from '../public/icons/home.svg';
+export {default as SearchIcon} from '../public/icons/search.svg';
+export {default as SettingIcon} from '../public/icons/setting.svg';
+export {default as PlusIcon} from '../public/icons/plus.svg';
