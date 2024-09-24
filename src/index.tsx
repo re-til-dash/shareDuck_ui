@@ -9,6 +9,7 @@ export {default as List} from './components/atoms/List/List';
 //mocules
 export {default as Button} from './components/molecules/Button/Button';
 export {default as FloatingButton} from './components/molecules/FloatingButton/FloatingButton';
+export {default as IconButton} from './components/molecules/IconButton/IconButton';
 export {default as Details} from './components/molecules/Details/Details';
 export {default as Tag} from './components/molecules/Tag/Tag';
 export {default as Profile} from './components/molecules/Profile/Profile';
@@ -16,7 +17,7 @@ export {default as Profile} from './components/molecules/Profile/Profile';
 
 
 //organisms
-
+export {default as TitlebarIcons} from './components/organisms/TitlebarIcons/TitlebarIcons';
 
 
 //hooks
@@ -30,3 +31,14 @@ export {default as DarkTheme} from './style/DarkTheme'
 
 export {default as GlobalStyle} from './style/GlobalStyle'
 export {default as TypoStyle} from './style/TypoStyle'
+
+//icons
+export {default as CloseIcon} from '/icons/titlebar-close.svg';
+export {default as SizeIcon} from '/icons/titlebar-size.svg';
+export {default as DownIcon} from '/icons/titlebar-min.svg';
+export {default as ArrowLeftIcon} from '/icons/arrow-left.svg';
+export {default as ArrowRightIcon} from '/icons/arrow-right.svg';
+export {default as HomeIcon} from '/icons/home.svg';
+export {default as SearchIcon} from '/icons/search.svg';
+export {default as SettingIcon} from '/icons/setting.svg';
+export {default as PlusIcon} from '/icons/plus.svg';
