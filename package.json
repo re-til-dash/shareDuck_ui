@@ -1,6 +1,6 @@
 {
   "name": "shareduck-ui",
-  "version": "0.0.23",
+  "version": "0.0.25",
   "type": "module",
   "author": "shareoluck",
   "repository": {
@@ -83,6 +83,8 @@
     "eslint-plugin-storybook": "^0.8.0",
     "jsdom": "^24.1.0",
     "path": "^0.12.7",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "styled-components": "^6.1.13",
     "token-transformer": "^0.0.33",
     "typescript": "^5.2.2",
