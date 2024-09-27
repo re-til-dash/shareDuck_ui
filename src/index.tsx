@@ -43,3 +43,10 @@ export {default as HomeIcon} from '../public/icons/home.svg';
 export {default as SearchIcon} from '../public/icons/search.svg';
 export {default as SettingIcon} from '../public/icons/setting.svg';
 export {default as PlusIcon} from '../public/icons/plus.svg';
+export {default as LogOutIcon} from '../public/icons/log-out.svg';
+
+//emoji
+
+export {default as HappyEmoji} from '../public/emoji/happy-face.svg';
+export {default as WorriedEmoji} from '../public/emoji/worried-face.svg';
+export {default as CryingEmoji} from '../public/emoji/crying-face.svg';
