@@ -12,6 +12,7 @@ export {default as FloatingButton} from './components/molecules/FloatingButton/F
 export {default as IconButton} from './components/molecules/IconButton/IconButton';
 export {default as Details} from './components/molecules/Details/Details';
 export {default as Tag} from './components/molecules/Tag/Tag';
+export {default as Toast} from './components/molecules/Toast/Toast';
 export {default as Profile} from './components/molecules/Profile/Profile';
 
 
