@@ -1,52 +1,72 @@
-import { HTMLAttributes } from "react";
+import { HTMLAttributes, createContext, useContext } from "react";
 import styled from "styled-components";
-import Icon from "../../atoms/Icon/Icon";
+import Img, { typeImgProps } from "../../atoms/Img/Img";
+import createTypoStyle from "../../../style/TypoStyle";
+//기존 backgroundColor에서 variants로 수정
 
-export interface typeToastProps extends HTMLAttributes<HTMLSpanElement>{
+type typeVariants = "warn" | "error" | "pass";
+
+export interface typeToastTextProps extends HTMLAttributes<HTMLSpanElement>{
     content: string;
 }
-const DefaultToast = styled.div`
-width: 220px;
-height: 30px;
-top: 20px;
-left: 20px;
-padding: 12px 16px;
-gap: 8px;
-border-radius: 8px;
-display: flex; /* Flexbox 적용 */
-align-items: center; /* 세로 중앙 정렬 */
-`
-Toasts.Emoji = styled.image`
-width: 36px;
-height: 36px;
-padding: 6px;
-border-radius: 9999px;
-display: inline-block
+export interface typeToastProps extends HTMLAttributes<HTMLSpanElement>{
+    variants:typeVariants ;
+}
+
+const ToastContext = createContext<typeVariants | null>(null)
+
+const DefaultToast = styled.span<{variants:typeVariants}>`
+    position: relative;
+    width: fit-content;
+    height: fit-content;
 `
 
-Toasts.Text = styled.span`
-font-family: SUIT;
-font-size: 14px;
-font-weight: 400;
-line-height: 24px;
-letter-spacing: -0.006em;
-text-align: left;
+function ToastsEmoji({src, alt, ...props}: typeImgProps){
+    const value = useContext(ToastContext)
+    return <StyledImg variants={value} src={src} alt={alt} width={36} height={36} {...props}/>
+}
+
+const StyledImg = styled(Img)<{variants:typeVariants}>`
+    padding: 6px;
+    border-radius: 9999px;
+    display: inline-block;
+    background-color: ${({variants})=>variants==="warn" ? "var(--yel-000)": variants === "error" ? "var(--red-000)": "var(--gre-000)"};
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    margin-left: 16px;
 `
 
-Toasts.Icon = Icon;
+function ToastsText({content, ...props}:typeToastTextProps){
+    const value = useContext(ToastContext)
+    return <StyledSpan variants={value} {...props}>{content}</StyledSpan>
+}
+
+const CSSToastsText = createTypoStyle("typo-body-14")
+const StyledSpan = styled.span<{variants:typeVariants}>`    
+    ${CSSToastsText}
+    text-align: left;
+    padding: 3px 16px 3px 60px;
+    border-radius: 8px;
+    color:  ${({variants})=>variants==="warn" ? "var(--yel-900)": variants === "error" ? "var(--red-900)": "var(--gre-900)"};
+    background-color: ${({variants})=>variants==="warn" ? "var(--yel-000)": variants === "error" ? "var(--red-000)": "var(--gre-000)"};
+`
 
 function Toasts({
-    backgroundColor,
-    text,
+    variants,
+    children,
     ...props
 }: typeToastProps){
-    console.log(backgroundColor)
     return (
-        <DefaultToast 
-        style={{ backgroundColor : backgroundColor}}
-        {...props}>
-        </DefaultToast>
+        <ToastContext.Provider value={variants}>
+            <DefaultToast variants={variants}
+            {...props}>
+                {children}
+            </DefaultToast>
+        </ToastContext.Provider>
     )
 }
 
+Toasts.Emoji = ToastsEmoji
+Toasts.Text = ToastsText
 export default Toasts;
